@@ -10,6 +10,20 @@ public class EllipseTest {
     }
 
     @Test
+    public void getAreaEllipseNegative2() {
+        Shape c = new Ellipse(-2, 3);
+
+        Assert.assertEquals(-1, c.getArea(), 0.1);
+    } 
+
+    @Test
+    public void getAreaEllipseNegative3() {
+        Shape c = new Ellipse(2, -3);
+
+        Assert.assertEquals(-1, c.getArea(), 0.1);
+    }
+
+    @Test
     public void getAreaEllipseColor2() {
         Shape c = new Ellipse(2, 3, "red");
 

@@ -1,12 +1,19 @@
 import org.junit.Test;
 import org.junit.Assert;
 
-public class BoxTest {
+public class BoxTest{
     @Test
     public void getAreaBox2() {
         Shape box = new Box(2);
 
         Assert.assertEquals(4.0, box.getArea(), 0.1);
+    }
+
+    @Test
+    public void getAreaBoxNegative2() {
+        Shape box = new Box(-2);
+
+        Assert.assertEquals(-1.0, box.getArea(), 0.1);
     }
 
     @Test

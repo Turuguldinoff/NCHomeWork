@@ -3,7 +3,7 @@ public class Triangle implements Shape {
     private double sideA;
     private double sideB;
     private double sideC;
-    private String color;
+    private Color color;
 
     public Triangle() {
     }
@@ -14,7 +14,7 @@ public class Triangle implements Shape {
         this.sideC = sideC;
     }
 
-    public Triangle(double sideA, double sideB, double sideC, String color) {
+    public Triangle(double sideA, double sideB, double sideC, Color color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
@@ -33,7 +33,7 @@ public class Triangle implements Shape {
         return this.sideC;
     }
 
-    public String getColor(){
+    public Color getColor(){
         return this.color;
     }
 
@@ -49,7 +49,7 @@ public class Triangle implements Shape {
         this.sideC = sideC;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -59,12 +59,18 @@ public class Triangle implements Shape {
     }
 
     public double getArea() {
-        if(sideA + sideB > sideC && sideC + sideB > sideA && sideA + sideC > sideB){
-            double p = (sideA + sideB + sideC) / 2;
-            return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-        }else{
-            System.out.println("Triangle none");
-            return 0;
+        if(sideA > 0 && sideB > 0 && sideC > 0){
+            if(sideA + sideB > sideC && sideC + sideB > sideA && sideA + sideC > sideB){
+                double p = (sideA + sideB + sideC) / 2;
+                return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+            }else{
+                System.out.println("Triangle none");
+                return -2;
+            }
+        }
+        else{
+            System.out.println("Triangle sida negaive");
+            return -1;
         }
     }
     

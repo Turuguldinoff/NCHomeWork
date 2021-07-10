@@ -1,7 +1,7 @@
 public class Circle implements Shape {
     
     private double radius;
-    private String color;
+    private Color color;
 
     public Circle() {
     }
@@ -11,7 +11,7 @@ public class Circle implements Shape {
         
     }
     
-    public Circle(double radius, String color) {
+    public Circle(double radius, Color color) {
         this.radius = radius;
         this.color = color;        
     }
@@ -20,7 +20,7 @@ public class Circle implements Shape {
         return this.radius;
     }
     
-    public String getColor(){
+    public Color getColor(){
         return this.color;
     }
 
@@ -28,7 +28,7 @@ public class Circle implements Shape {
         this.radius = radius;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -38,7 +38,11 @@ public class Circle implements Shape {
     }
 
     public double getArea() {
-        return Math.PI * radius * radius;
+        if (radius > 0) return Math.PI * Math.pow(radius, 2);
+        else{
+            System.out.println("Radius negative number");
+            return -1;
+        }
     }
     
 }

@@ -2,7 +2,7 @@ public class Ellipse implements Shape {
     
     private double maxRadius;
     private double minRadius;
-    private Color color;
+    private String color;
 
     public Ellipse() {
     }
@@ -12,7 +12,7 @@ public class Ellipse implements Shape {
         this.minRadius = minRadius;
     }
 
-    public Ellipse(double maxRadius, double minRadius, Color color) {
+    public Ellipse(double maxRadius, double minRadius, String color) {
         this.maxRadius = maxRadius;
         this.minRadius = minRadius;
         this.color = color;   
@@ -26,7 +26,7 @@ public class Ellipse implements Shape {
         return this.minRadius;
     }
     
-    public Color getColor(){
+    public String getColor(){
         return this.color;
     }
 
@@ -38,7 +38,7 @@ public class Ellipse implements Shape {
         this.minRadius = minRadius;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 

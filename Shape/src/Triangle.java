@@ -3,7 +3,7 @@ public class Triangle implements Shape {
     private double sideA;
     private double sideB;
     private double sideC;
-    private Color color;
+    private String color;
 
     public Triangle() {
     }
@@ -14,7 +14,7 @@ public class Triangle implements Shape {
         this.sideC = sideC;
     }
 
-    public Triangle(double sideA, double sideB, double sideC, Color color) {
+    public Triangle(double sideA, double sideB, double sideC, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
@@ -33,7 +33,7 @@ public class Triangle implements Shape {
         return this.sideC;
     }
 
-    public Color getColor(){
+    public String getColor(){
         return this.color;
     }
 
@@ -49,7 +49,7 @@ public class Triangle implements Shape {
         this.sideC = sideC;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 

@@ -1,7 +1,7 @@
 public class Box implements Shape {
     
     private double side;
-    private Color color;
+    private String color;
 
     public Box() {
     }
@@ -11,7 +11,7 @@ public class Box implements Shape {
         
     }
     
-    public Box(double side, Color color) {
+    public Box(double side, String color) {
         this.side = side;
         this.color = color;        
     }
@@ -20,7 +20,7 @@ public class Box implements Shape {
         return this.side;
     }
     
-    public Color getColor(){
+    public String getColor(){
         return this.color;
     }
 
@@ -28,7 +28,7 @@ public class Box implements Shape {
         this.side = side;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
@@ -42,7 +42,7 @@ public class Box implements Shape {
             return Math.pow(side, 2);
         }
         else{
-            System.out.println("Side negative number");
+            System.out.println(" negative number");
             return -1;
         }
     }
